@@ -89,6 +89,18 @@ public class CustomGradeView extends ConstraintLayout{
         textView.setText(String.valueOf(grade));
     }
 
+    public void setTextColor(int color){
+        textView.setTextColor(getContext().getColor(color));
+    }
+
+    public void setBarColor(int color){
+        progressBar.getProgressDrawable().setColorFilter(getContext().getColor(color), PorterDuff.Mode.SRC_IN);
+    }
+
+    public void setTextSize(int size){
+        textView.setTextSize(size);
+    }
+
     public TextView getTextView() {
         return textView;
     }
