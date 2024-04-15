@@ -79,9 +79,9 @@ public class PreferenciasActivity extends AppCompatActivity {
         }
 
 
-        ArrayAdapter<String> miAdaptador =
-                new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, colors);
-        spinnerTextColor.setAdapter(miAdaptador);
+        //ArrayAdapter<String> miAdaptador = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, colors);
+        //spinnerTextColor.setAdapter(miAdaptador);
+        spinnerTextColor.setAdapter(new MyOwnArrayAdapter<>(this, R.layout.custom_spinner_colors, Color.values()));
 
         spinnerTextColor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
